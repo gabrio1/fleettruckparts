@@ -39,7 +39,8 @@ var gulp = require('gulp')
 ,	args   = require('yargs').argv
 ,	express = require('express')
 ,	child_process = require('child_process')
-,	serveIndex = require('serve-index');
+,	serveIndex = require('serve-index')
+,	livereload = require('../livereload');
 
 function initServer(cb)
 {
@@ -120,6 +121,13 @@ function initServerExpress(http_config, https_config, cb)
 		}
 	}
 
+	if(livereload.isEnabled()) {
+		logger.push('+- LiveReload server running at: ', gutil.colors.cyan('ws://localhost:' + livereload.getPort() + '/livereload'));
+		if (https_config) {
+			logger.push('+- LiveReload secure server running at: ', gutil.colors.cyan('wss://localhost:' + livereload.getSecurePort() + '/livereload'));
+		}
+	}
+
 	// cb();
 	logger.push('+- Watching current folder: ', gutil.colors.cyan(path.join(process.cwd(), 'Modules')));
 	logger.push('+- To cancel Gulp Watch enter: ', gutil.colors.cyan('control + c'));
@@ -197,7 +205,7 @@ gulp.task('local-install', function()
 	package_manager.isGulpLocal = true;
 });
 
-gulp.task('local', ['local-install', 'frontend', 'watch', 'javascript-entrypoints'], initServer);
+gulp.task('local', ['local-install', 'frontend', 'watch', 'javascript-entrypoints', 'hosting-root-files'], initServer);
 
 // TODO remove in the future
 gulp.task('local-nginx', [], function(cb)

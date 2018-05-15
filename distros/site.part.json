@@ -1,0 +1,64 @@
+{
+    "id": "site",
+    "name": "Site",
+    "dependencies": [
+        "vinson-base"
+    ],
+    "endpoint": true,
+    "modules": {
+        "site/Footer.Site": "dev",
+        "site/Header.Site": "dev",
+        "site/Home.Site": "dev",
+        "site/Facets.Site": "dev",
+        "site/ItemDetails.Site": "dev"
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "gulp": {
+
+    },
+    "overrides": {
+        "suitecommerce/Facets@2.3.0/Sass/_facets-facet-browse.scss" :"Sass/_facets-facet-browse.scss"
+  }
+}

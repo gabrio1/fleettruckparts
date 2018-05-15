@@ -5,7 +5,7 @@ var testUtil = require('./testUtil');
   
 describe('addList', function()
 {
-	var aFolderName = 'folderfromws1_addlisttest_'+new Date().getTime()
+	var aFolderName = 'folderfromws1_'+new Date().getTime()
 	,	aFolderInternalId
 	,	newFilesIds = [];
 

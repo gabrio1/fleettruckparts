@@ -1,0 +1,10 @@
+/bin/**
+/distros/**
+/gulp/**
+/HostingRootFiles/**
+/node_modules/**
+/ns_npm_repository/**
+/SupportScripts/**
+/Modules/suitecommerce/**
+/Modules/third_parties*/**
+gulpfile.js
