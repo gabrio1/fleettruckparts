@@ -1,0 +1,150 @@
+{
+    "id": "suitecommercefixes",
+    "name": "SuiteSolution Boilerplate - For Vinson",
+    "dependencies": ["vinson-base"],
+    "folders": {
+        "modules": "Modules",
+        "suitecommerceModules": "Modules/suitecommerce",
+        "thirdPartyModules": "Modules/third_parties",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution",
+        "binaries": "bin"
+    },
+    "endpoint": true,
+    "modules": {
+        "suitecommercefixes/AdvancedItemImages": "1.2.1",
+        "suitecommercefixes/Backbone.CompositeView.CollectionViewFix": "1.0.1",
+        "suitecommercefixes/Backbone.CompositeView.DataContext": "1.0.0",
+        "suitecommercefixes/Backbone.PluginInstaller": "1.0.0",
+        "suitecommercefixes/Backbone.View.PostContextHook": "1.0.0",
+        "suitecommercefixes/Case.UrlParams" : "1.0.0",
+        "suitecommercefixes/ContactUs": "1.3.1",
+        "suitecommercefixes/CMSadapterFixes": "1.2.2",
+        "suitecommercefixes/CMSMerchandisingZonesInitialization": "1.0.1",
+        "suitecommercefixes/CMSRefreshLinks": "1.0.0",
+        "suitecommercefixes/EnvironmentFiles": "3.0.0",
+        "suitecommercefixes/EFCore": "1.0.2",
+        "suitecommercefixes/HashScroll": "1.0.0",
+        "suitecommercefixes/ResolveAssetUrl": "1.0.0",
+        "suitecommercefixes/SetupWebsiteConfigurationEnhancements": "1.0.1",
+        "suitecommercefixes/ShoppingStarterFixes": "1.1.0",
+        "suitecommercefixes/StagingNoIndex": "1.0.0",
+        "suitecommercefixes/StyleFixes": "2.0.0",
+        "suitecommercefixes/SSPFiles": "3.1.1",
+        "suitecommercefixes/GlobalConfiguration": "1.0.0"
+    },
+    "tasksConfig": {
+        "livereload": {
+            "enable": true,
+            "secure": {
+                "js_port": 35730,
+                "port": 35731
+            },
+            "config": {
+                "start": true,
+                "silent": true,
+                "port": 35729,
+                "https": true
+            },
+            "tasks": {
+                "sass": true,
+                "templates": true
+            }
+        },
+        "local": {
+            "https": {
+                "port": 7778,
+                "key": "SupportScripts/local-https/key.pem",
+                "cert": "SupportScripts/local-https/cert.pem"
+            }
+        },
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+                    "Backbone.CompositeView.CollectionViewFix",
+                    "Backbone.CompositeView.DataContext",
+                    "CMSRefreshLinks",
+                    "CMSadapterFixes",
+                    "CMSMerchandisingZonesInitialization",
+                    "HashScroll",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "StagingNoIndex",
+                    "AdvancedItemImages",
+                    "ContactUs"
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+                    "Backbone.CompositeView.CollectionViewFix",
+                    "Backbone.CompositeView.DataContext",
+                    "CMSadapterFixes",
+                    "HashScroll",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "AdvancedItemImages",
+                    "Case.UrlParams"
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"},
+                    "Backbone.CompositeView.CollectionViewFix",
+                    "Backbone.CompositeView.DataContext",
+                    "CMSadapterFixes",
+                    "HashScroll",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "AdvancedItemImages"
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+                "CMSadapterFixes",
+                "ContactUs.Model",
+                "ContactUs.ServiceController",
+                "SetupWebsiteConfigurationEnhancements"
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                        "StyleFixes",
+                        "ContactUs"
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                        {
+                            "module": "StyleFixes",
+                            "exclude": [
+                                "facets_item_cell_fixes"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                        {
+                            "module": "StyleFixes",
+                            "exclude": [
+                                "facets_item_cell_fixes"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

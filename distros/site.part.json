@@ -2,14 +2,14 @@
     "id": "site",
     "name": "Site",
     "dependencies": [
-        "vinson-base"
+        "suitecommercefixes"
     ],
-    "endpoint": true,
+    "endpoint": "true",
     "modules": {
+        "site/Facets.Site": "dev",
         "site/Footer.Site": "dev",
         "site/Header.Site": "dev",
         "site/Home.Site": "dev",
-        "site/Facets.Site": "dev",
         "site/ItemDetails.Site": "dev"
     },
     "tasksConfig": {
@@ -17,6 +17,7 @@
             {
                 "entryPoint": "SC.Shopping.Starter",
                 "dependencies": [
+                    "Facets.FacetedNavigationItemCategory.View.Site"
 
                 ]
             },

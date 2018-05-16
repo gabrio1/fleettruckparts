@@ -1,0 +1,8 @@
+1.0.0
+- Initial Release
+
+1.2.0
+- Migrate configuration to vinson
+
+1.2.1
+- FIXED: Data type mismatch for Configuration.multiImageOption

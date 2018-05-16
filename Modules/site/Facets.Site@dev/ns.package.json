@@ -1,8 +1,14 @@
 {
     "gulp": {
-
+      "javascript": [
+        "JavaScript/*.js"
+      ],
+      "templates": [
+        "Templates/*.tpl"
+      ]
     },
     "overrides": {
-        "suitecommerce/Facets@2.3.0/Sass/_facets-facet-browse.scss" :"Sass/_facets-facet-browse.scss"
+        "suitecommerce/Facets@2.3.0/Sass/_facets-facet-browse.scss" :"Sass/_facets-facet-browse.scss",
+        "suitecommerce/Facets@2.3.0/Templates/facets_browse_category_heading.tpl" :"Templates/facets_browse_category_heading.tpl"
   }
 }

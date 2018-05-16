@@ -1,0 +1,5 @@
+1.0.0
+- Initial Release
+
+1.0.1
+-FIXED infinite looping in login page after customer session timedout

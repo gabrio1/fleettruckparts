@@ -36,9 +36,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="row"><p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p></div>
+            <div class="row"><p class="copyright text-muted small">Copyright &copy; Fleet Truck Parts 2018. All Rights Reserved</p></div>
         </div>
-<!-- 
+<!--
 	<div id="banner-footer" class="content-banner banner-footer" data-cms-area="global_banner_footer" data-cms-area-filters="global"></div>
 
 	<div class="footer-content-nav">

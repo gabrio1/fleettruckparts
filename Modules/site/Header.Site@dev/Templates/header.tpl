@@ -74,7 +74,7 @@
 		 <article class="logo-intro">
             <div class="row">
                 <div class="col-lg-12 container-logo">
-                    <a href="http://www.truckpartsgroup.com"><img class="img-responsive logo" src="img/logo.png" alt="Chania"></a>
+                    <a href="" data-hashtag="#" data-touchpoint="home"><img class="img-responsive logo" src="/img/logo.png" alt="Fleetruckparts"></a>
                 </div>
             </div>
     </article>

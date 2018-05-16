@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "contactUs",
+    "title": "Contact Us",
+    "group": "customizations"
+  },
+  "properties": {
+    "customizations.contactUs.enabled": {
+      "group": "customizations",
+      "subtab": "contactUs",
+      "type": "boolean",
+      "title": "Enabled",
+      "default": false
+    },
+    "contactUs.formId": {
+      "group": "customizations",
+      "subtab": "contactUs",
+      "type": "string",
+      "title": "Form ID"
+    },
+    "contactUs.hash": {
+      "group": "customizations",
+      "subtab": "contactUs",
+      "type": "string",
+      "title": "Generated Hash"
+    }
+  }
+}

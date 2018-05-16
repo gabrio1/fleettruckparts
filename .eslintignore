@@ -6,5 +6,6 @@
 /ns_npm_repository/**
 /SupportScripts/**
 /Modules/suitecommerce/**
+/Modules/suitecommercefixes/**
 /Modules/third_parties*/**
 gulpfile.js
