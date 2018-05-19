@@ -10,15 +10,16 @@
         "site/Footer.Site": "dev",
         "site/Header.Site": "dev",
         "site/Home.Site": "dev",
-        "site/ItemDetails.Site": "dev"
+        "site/ItemDetails.Site": "dev",
+        "site/MakeType.Site": "dev"
     },
     "tasksConfig": {
         "javascript": [
             {
                 "entryPoint": "SC.Shopping.Starter",
                 "dependencies": [
-                    "Facets.FacetedNavigationItemCategory.View.Site"
-
+                    "Facets.FacetedNavigationItemCategory.View.Site",
+                    "MakeType"
                 ]
             },
             {
